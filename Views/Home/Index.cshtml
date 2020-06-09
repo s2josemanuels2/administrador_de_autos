@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<button id="btnAddNewCar" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addnewcar">
+    Agregar
+</button>
+<div class="alert alert-success d-none" id="msjUsuario" role="alert">
+</div>
+<div class="divtable">
+    <table class="table tbcarros">
+        <thead class="thead">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Año</th>
+                <th scope="col">Kilometros</th>
+                <th scope="col">Precio</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tbodycarros">
+            @foreach(var item in Model.autos)
+            {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Marca</td>
+                <td>@item.Modelo</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Anio</td>
+                <td>@item.Kilometros</td>
+                <td>@item.Precio</td>
+                <td>
+                    <button data-id="@item.Id" data-toggle="modal" data-target="#addnewcar" class="btn btn-warning btnEditar">Editar</button>
+                    <button data-id="@item.Id" class="btn btn-danger btnEliminar">Eliminar</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

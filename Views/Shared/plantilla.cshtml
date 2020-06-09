@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrador de autos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/estilos.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h2 class="titulo">Administrador de autos</h2>
+        </div>
+    </header>
+    <section class="main container">
+        @RenderBody();
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <h5>&copy; Jose Manuel Morales Flores</h5>
+        </div>
+    </footer>
+    <div class="modal" id="addnewcar" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title titulomodal">Agregar nuevo auto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form asp-controller="Home" asp-action="Store" id="frmAddandModCars" autocomplete="off">
+                        <input type="hidden" name="idCar" value="" />
+                        <label>Marca</label>
+                        <input class="form-control" required maxlength="50" type="text" name="Marca" />
+                        <label>Modelo</label>
+                        <input class="form-control" required maxlength="50" type="text" name="Modelo" />
+                        <label>Descripción</label>
+                        <input class="form-control" type="text" maxlength="100" name="Descripcion" />
+                        <label>Año</label>
+                        <input class="form-control" type="number" min="0" max="9000" name="Anio" />
+                        <label>Kilometros</label>
+                        <input class="form-control" required type="number" min="0" max="1000000" name="Km" placeholder="km" />
+                        <label>Precio</label>
+                        <input class="form-control" required type="number" min="1" max="10000000" name="Precio" placeholder="$" />
+                        <input type="submit" id="btnSave" value="save" class="d-none" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnGuardarDatos" class="btn btn-success">Guardar</button>
+                    <button type="button" id="btnCerrarModal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

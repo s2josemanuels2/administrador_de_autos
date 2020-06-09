@@ -1,0 +1,48 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#frmAddCars {
+    width: 100%;
+}
+
+.header, .footer {
+    background-color: darkslategrey;
+}
+
+.main {
+    min-height: 550px;
+}
+
+.footer {
+    height: 60px;
+}
+
+.footer > div > h5 {
+    color: white;
+    text-align: center;
+}
+
+.titulo {
+    color: white;
+    padding: 10px 0px;
+}
+
+.tbcarros {
+    margin-top: 30px;
+}
+
+.tbcarros > thead {
+    background-color: darkslategrey;
+    color: white;
+}
+.divtable{
+    max-height: 400px;
+    height:400px;
+    overflow-y:auto;
+}
+
+.tbcarros > thead, .tbcarros > tbody {
+    text-align: center;
+}

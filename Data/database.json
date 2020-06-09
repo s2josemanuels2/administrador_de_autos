@@ -1,0 +1,40 @@
+{
+  "autos": [
+    {
+      "Id": 1,
+      "Marca": "Derby",
+      "Modelo": "HG-12",
+      "Descripcion": "Color dorado",
+      "Anio": 2000,
+      "Kilometros": 30000,
+      "Precio": 35000.0
+    },
+    {
+      "Id": 2,
+      "Marca": "Jetta",
+      "Modelo": "HB-12",
+      "Descripcion": "Color negro",
+      "Anio": 2005,
+      "Kilometros": 50000,
+      "Precio": 55000.0
+    },
+    {
+      "Id": 3,
+      "Marca": "Honda",
+      "Modelo": "CIVIC",
+      "Descripcion": "Color gris",
+      "Anio": 2003,
+      "Kilometros": 123123,
+      "Precio": 100000.0
+    },
+    {
+      "Id": 4,
+      "Marca": "Chevrolet",
+      "Modelo": "Cheyene",
+      "Descripcion": "Color rosa",
+      "Anio": 2015,
+      "Kilometros": 76000,
+      "Precio": 250000.0
+    }
+  ]
+}
